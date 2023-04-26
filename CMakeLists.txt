@@ -26,7 +26,9 @@ option(OSQP-CPP_BUILD_TESTS
 
 include(FetchContent)
 
+
 # ABSL
+set(ABSL_PROPAGATE_CXX_STD ON)
 if (NOT TARGET absl::strings OR NOT TARGET absl::status OR NOT TARGET absl::span)
   message(STATUS "osqp-cpp: `absl` targets not found. Attempting to fetch contents...")
   FetchContent_Declare(
